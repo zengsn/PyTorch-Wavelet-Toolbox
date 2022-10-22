@@ -26,6 +26,8 @@ Pytorch Wavelet Toolbox (`ptwt`)
     :target: https://github.com/psf/black
     :alt: Black code style
 
+.. image:: https://static.pepy.tech/personalized-badge/ptwt?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads
+ :target: https://pepy.tech/project/ptwt
 
 
 
@@ -37,7 +39,7 @@ Welcome to the PyTorch wavelet toolbox. This package implements:
 - ``MatrixWavedec`` and ``MatrixWaverec`` provide sparse-matrix-based fast wavelet transforms with boundary filters,
 - 2d sparse-matrix transforms with separable & non-separable boundary filters are available (experimental),
 - ``cwt`` computes a one-dimensional continuous forward transform,
-- single and two-dimensional wavelet packet forward transforms are available via the ``WaveletPacket`` and ``WaveletPacket2D`` objects,
+- single and two-dimensional wavelet packet forward and backward transforms are available via the ``WaveletPacket`` and ``WaveletPacket2D`` objects,
 - finally, this package provides adaptive wavelet support (experimental).
 
 This toolbox supports pywt-wavelets. Complete documentation is available:
@@ -145,7 +147,7 @@ Reconsidering the 1d case, try:
 The process for the 2d transforms ``MatrixWavedec2``, ``MatrixWaverec2`` works similarly.
 By default, a non-separable transformation is used.
 To use a separable transformation, pass ``separable=True`` to ``MatrixWavedec2`` and ``MatrixWaverec2``.
-Separable transformations use a 1d transformation along both axes which might be faster since less matrix entries
+Separable transformations use a 1d transformation along both axes, which might be faster since fewer matrix entries
 have to be orthogonalized.
 
 
@@ -157,7 +159,7 @@ from pywt,
 - Adaptive product-filters
 - and optimizable orthogonal-wavelets are supported.
 
-See https://github.com/v0lta/PyTorch-Wavelet-Toolbox/tree/main/examples for a complete implementation.
+See https://github.com/v0lta/PyTorch-Wavelet-Toolbox/tree/main/examples/network_compression/ for a complete implementation.
 
 
 **Testing**
